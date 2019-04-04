@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro do Paciente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <!-- Nome do Paciente -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="stacked">Nome do paciente</ion-label>
+          <ion-input type="text" placeholder="Digite o nome do paciente"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Data de Nascimento do paciente -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="stacked">Data de Nascimento do paciente</ion-label>
+          <ion-datetime display-format="DD/MMM/YYYY"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Número da Ocorrência -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="stacked">Número da ocorrência</ion-label>
+          <ion-input type="number" placeholder="Digite o número da ocorrência"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Sexo do Paciente -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label text-capitalize>Sexo</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Masculino</ion-label>
+              <ion-radio slot="start" value="masculino"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Feminino</ion-label>
+              <ion-radio slot="start" value="feminino"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botão Continuar -->
+    <ion-row>
+      <ion-col padding-top>
+        <ion-button color="tertiary" expand="full" (click)="abrirPagina('tipos-de-erros')">Continuar</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-button end="true" color="tertiary">
+      <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+      Continuar
+    </ion-button>
+
+  </ion-grid>
+
+  <ion-button slot="end" color="tertiary">
+    <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+    Continuar
+  </ion-button>
+
+</ion-content>

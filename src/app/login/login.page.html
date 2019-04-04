@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>NotiSamu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <!-- E-mail -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Senha -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botão Login -->
+    <ion-row>
+      <ion-col padding-top>
+        <ion-button color="tertiary" expand="full" (click)="abrirPagina('aviso')">Login</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

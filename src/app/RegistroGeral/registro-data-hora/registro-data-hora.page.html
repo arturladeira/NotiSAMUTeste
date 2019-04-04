@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de Data e Hora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+   <ion-grid> 
+    <!-- Nome do Notificante -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="stacked">Nome do Notificante (opcional)</ion-label>
+          <ion-input type="text" placeholder="Digite seu nome"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Data da Ocorrência -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="stacked">Data da ocorrência</ion-label>
+          <ion-datetime display-format="DD/MMM/YYYY"></ion-datetime> 
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Horário -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label text-capitalize>Horário</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Manhã</ion-label>
+              <ion-radio slot="start" value="manha"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Tarde</ion-label>
+              <ion-radio slot="start" value="tarde"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Noite</ion-label>
+              <ion-radio slot="start" value="noite"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Profissão -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label text-capitalize>Profissão</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Enfermeiro</ion-label>
+              <ion-radio slot="start" value="enfermeiro"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Técnico de Enfermagem</ion-label>
+              <ion-radio slot="start" value="tecnicoDeEnfermagem"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Médico</ion-label>
+              <ion-radio slot="start" value="medico"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botão Continuar -->
+    <ion-row>
+      <ion-col padding-top>
+        <ion-button color="tertiary" expand="full" (click)="abrirPagina('registro-local')">Continuar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

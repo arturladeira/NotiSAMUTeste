@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro do Local</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <!-- Bairro -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-item>
+          <ion-label position="stacked">Bairro</ion-label>
+          <ion-input type="text" placeholder="Digite o bairro onde houve a ocorrência"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Categoria do Local -->
+    <ion-row>
+      <ion-col padding-botton>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label text-capitalize>Categoria do Local</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Na ambulância</ion-label>
+              <ion-radio slot="start" value="ambulancia"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>No asfalto</ion-label>
+              <ion-radio slot="start" value="asfalto"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Na residência</ion-label>
+              <ion-radio slot="start" value="residencia"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>No hospital</ion-label>
+              <ion-radio slot="start" value="hospital"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Outro</ion-label>
+              <ion-radio slot="start" value="outro"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Digite o local</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botão Continuar -->
+    <ion-row>
+      <ion-col padding-top>
+        <ion-button color="tertiary" expand="full" (click)="abrirPagina('registro-paciente')">Continuar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
