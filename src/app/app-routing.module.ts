@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'registro-data-hora', loadChildren: './RegistroGeral/registro-data-hora/registro-data-hora.module#RegistroDataHoraPageModule' },
   { path: 'registro-local', loadChildren: './RegistroGeral/registro-local/registro-local.module#RegistroLocalPageModule' },
   { path: 'registro-paciente', loadChildren: './RegistroGeral/registro-paciente/registro-paciente.module#RegistroPacientePageModule' },
-  { path: 'tipos-de-erros', loadChildren: './IndicacaoDosErros/tipos-de-erros/tipos-de-erros.module#TiposDeErrosPageModule' },
+
 ];
 @NgModule({
   imports: [
