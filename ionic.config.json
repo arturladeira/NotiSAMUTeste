@@ -1,5 +1,7 @@
 {
   "name": "NotiSamu",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
