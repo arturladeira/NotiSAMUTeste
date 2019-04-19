@@ -47,11 +47,11 @@
             </ion-item>
             <ion-item>
               <ion-label>Outro</ion-label>
-              <ion-radio slot="start" value="outro"></ion-radio>
+              <ion-radio slot="start" value="outro" [checked]="isChecked"></ion-radio>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Digite o local</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" [disabled]="!isChecked"></ion-input>
             </ion-item>
           </ion-radio-group>
         </ion-list>

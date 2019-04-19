@@ -9,7 +9,7 @@ import { NavController } from '@ionic/angular';
 export class RegistroLocalPage implements OnInit {
 
   constructor(private navCtrl: NavController) { }
-
+  public isChecked: boolean = false;
   ngOnInit() {
   }
 

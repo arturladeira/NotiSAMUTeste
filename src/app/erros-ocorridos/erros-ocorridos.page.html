@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Quais erros ocorreram?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="ion-no-padding">
+
+  <!-- Erros de Prescrição-->
+ <ion-card>
+   <ion-card-header>
+      <ion-card-title>Erros de Prescrição</ion-card-title>
+   </ion-card-header>
+
+   <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let Prescricoes of prescricao">
+          <ion-label>{{Prescricoes.val}}</ion-label>
+          <ion-checkbox [(ngModel)]="Prescricoes.isChecked" (ionChange)="Escolhido($Prescricoes)"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+   </ion-card-content>
+ </ion-card>
+
+
+   <!-- Erros de Dispensação-->
+   <ion-card>
+      <ion-card-header>
+         <ion-card-title>Erros de Dispensação</ion-card-title>
+      </ion-card-header>
+   
+      <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let Dispensacoes of dispensacao">
+              <ion-label>{{Dispensacoes.val}}</ion-label>
+              <ion-checkbox [(ngModel)]="Dispensacoes.isChecked"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+       </ion-card-content>
+    </ion-card>
+
+  <!-- Erros de Preparo/Administração-->
+   <ion-card>
+      <ion-card-header>
+         <ion-card-title>Erros de Preparo/ Administração</ion-card-title>
+      </ion-card-header>
+   
+      <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let Preparos of preparo">
+              <ion-label>{{Preparos.val}}</ion-label>
+              <ion-checkbox [(ngModel)]="Preparos.isChecked"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-button color="tertiary" expand="full">Continuar</ion-button>
+  <!-- (click)="abrirPagina('erros-ocorridos') "-->
+</ion-content>
