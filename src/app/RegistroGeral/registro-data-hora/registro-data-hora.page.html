@@ -8,14 +8,14 @@
 </ion-header>
 
 <ion-content padding>
-
+  <form [formGroup]="createRegisterForm" (submit)="createRegister()" novalidate></form>
    <ion-grid> 
     <!-- Nome do Notificante -->
     <ion-row>
       <ion-col padding-botton>
         <ion-item>
           <ion-label position="stacked">Nome do Notificante (opcional)</ion-label>
-          <ion-input type="text" placeholder="Digite seu nome"></ion-input>
+          <ion-input formControlName="notifierName" type="text" placeholder="Digite seu nome"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -25,7 +25,7 @@
       <ion-col padding-botton>
         <ion-item>
           <ion-label position="stacked">Data da ocorrência</ion-label>
-          <ion-datetime display-format="DD/MMM/YYYY"></ion-datetime> 
+          <ion-datetime formControlName="occurrenceDate" display-format="DD/MMM/YYYY"></ion-datetime> 
         </ion-item>
       </ion-col>
     </ion-row>
@@ -40,15 +40,15 @@
             </ion-list-header>
             <ion-item>
               <ion-label>Manhã</ion-label>
-              <ion-radio slot="start" value="manha"></ion-radio>
+              <ion-radio formControlName="schedule" slot="start" value="manha"></ion-radio>
             </ion-item>
             <ion-item>
               <ion-label>Tarde</ion-label>
-              <ion-radio slot="start" value="tarde"></ion-radio>
+              <ion-radio formControlName="schedule" slot="start" value="tarde"></ion-radio>
             </ion-item>
             <ion-item>
               <ion-label>Noite</ion-label>
-              <ion-radio slot="start" value="noite"></ion-radio>
+              <ion-radio formControlName="schedule" slot="start" value="noite"></ion-radio>
             </ion-item>
           </ion-radio-group>
         </ion-list>
@@ -65,15 +65,15 @@
             </ion-list-header>
             <ion-item>
               <ion-label>Enfermeiro</ion-label>
-              <ion-radio slot="start" value="enfermeiro"></ion-radio>
+              <ion-radio formControlName="notifierProfession" slot="start" value="enfermeiro"></ion-radio>
             </ion-item>
             <ion-item>
               <ion-label>Técnico de Enfermagem</ion-label>
-              <ion-radio slot="start" value="tecnicoDeEnfermagem"></ion-radio>
+              <ion-radio formControlName="notifierProfession" slot="start" value="tecnicoDeEnfermagem"></ion-radio>
             </ion-item>
             <ion-item>
               <ion-label>Médico</ion-label>
-              <ion-radio slot="start" value="medico"></ion-radio>
+              <ion-radio formControlName="notifierProfession" slot="start" value="medico"></ion-radio>
             </ion-item>
           </ion-radio-group>
         </ion-list>
@@ -83,10 +83,11 @@
     <!-- Botão Continuar -->
     <ion-row>
       <ion-col padding-top>
-        <ion-button color="tertiary" expand="full" (click)="abrirPagina('registro-local')">Continuar</ion-button>
+        <ion-button block type="submit" [disabled]="!createRegisterForm.valid" color="tertiary" expand="full" (click)="abrirPagina('registro-local')">Continuar</ion-button>
       </ion-col>
     </ion-row>
 
-  </ion-grid>
-
+    </ion-grid>
+    
+  </form>
 </ion-content>

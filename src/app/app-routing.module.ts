@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'registro-paciente', loadChildren: './RegistroGeral/registro-paciente/registro-paciente.module#RegistroPacientePageModule' },
   { path: 'erros-ocorridos', loadChildren: './erros-ocorridos/erros-ocorridos.module#ErrosOcorridosPageModule' },
   { path: 'validado', loadChildren: './validado/validado.module#ValidadoPageModule' },
+  { path: 'registros', loadChildren: './Firestore/registros/registros.module#RegistrosPageModule' },
 
 ];
 
